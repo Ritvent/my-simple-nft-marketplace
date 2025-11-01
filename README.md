@@ -114,6 +114,36 @@ sui client call \
   --gas-budget 10000000
 ```
 
+### Burning an NFT
+
+```bash
+sui client call \
+  --package <PACKAGE_ID> \
+  --module nft_marketplace \
+  --function burn_nft \
+  --args <NFT_OBJECT_ID> \
+  --gas-budget 10000000
+```
+
+### Withdrawing Marketplace Fees (Admin Only)
+```bash
+sui client call \
+  --package <PACKAGE_ID> \
+  --module nft_marketplace \
+  --function withdraw_marketplace_fees \
+  --args <MARKETPLACE_OBJECT_ID> <AMOUNT_IN_MIST> <RECIPIENT_ADDRESS> \
+  --gas-budget 10000000
+```
+
+Arguments:
+
+- MARKETPLACE_OBJECT_ID: The shared marketplace object
+
+- AMOUNT_IN_MIST: Amount to withdraw (e.g., 20000000 for 0.02 SUI)
+
+- RECIPIENT_ADDRESS: Wallet address to receive the fees
+
+
 ## 🏗️ Smart Contract Structure
 
 ### Structs
