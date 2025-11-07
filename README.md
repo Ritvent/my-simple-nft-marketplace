@@ -92,6 +92,19 @@ sui client call \
 ```
 *Note: Price is in MIST (1 SUI = 1,000,000,000 MIST)*
 
+### Updating an NFT Description
+
+```bash
+sui client call \
+  --package <PACKAGE_ID> \
+  --module nft_marketplace \
+  --function update_nft_description \
+  --args <LISTING_OBJECT_ID> "<UPDATE DESCRIPTION>" \
+  --gas-budget 10000000
+
+
+```
+
 ### Buying an NFT
 
 ```bash
